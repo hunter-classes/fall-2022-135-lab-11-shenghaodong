@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 class Profile{
 private:
@@ -8,15 +9,15 @@ private:
 public:
     // Profile constructor for a user (initializing 
     // private variables username=usrn, displayname=dspn)
-    Profile(string usrn, string dspn);
+    Profile(std::string usrn, std::string dspn);
     // Default Profile constructor (username="", displayname="")
     Profile();
     // Return username
-    string getUsername();
+    std::string getUsername();
     // Return name in the format: "displayname (@username)"
-    string getFullName();
+    std::string getFullName();
     // Change display name
-    void setDisplayName(string dspn);
+    void setDisplayName(std::string dspn);
 };
 
 /*

@@ -5,19 +5,19 @@ std::string Profile::getUsername(){
 }
 
 std::string Profile::getFullName(){
-    //
+    return username;
 }
 
 void Profile::setDisplayName(std::string dspn){
     displayName = dspn;
 }
 
-Particle::Profile(){
-    usrn = "put something here later";
-    dspn = "put something else here too"
+Profile::Profile(){
+    username = "put something here later";
+    displayName = "put something else here too";
 }
 
-Particle::Profile(std::string usrn, std::string dspn){
+Profile::Profile(std::string usrn, std::string dspn){
     username = usrn;
     displayName = dspn;
 }
