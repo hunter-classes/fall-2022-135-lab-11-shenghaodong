@@ -1,44 +1,47 @@
 #include "profile.h"
-
-std::string Profile::getUsername(){
-    return username;
-}
-
-std::string Profile::getFullName(){
-    return username;
-}
-
-void Profile::setDisplayName(std::string dspn){
-    displayName = dspn;
-}
-
 Profile::Profile(){
-    username = "put something here later";
-    displayName = "put something else here too";
+  username = "";
+  displayName = "";
+
 }
 
 Profile::Profile(std::string usrn, std::string dspn){
-    username = usrn;
-    displayName = dspn;
+  username = usrn;
+  displayName = dspn;
 }
 
-/*Example
-double Particle::getX() { 
-  return x; 
+std::string Profile::getUsername(){
+  return username;
 }
-double Particle::getY() { 
-  return y; 
+
+std::string Profile::getFullName(){
+  std::string fullName = displayName + "(@" + username + ")";
+  return fullName;
+  // Return name in the format: "displayname (@username)"
 }
-void Particle::move(double dt) {
-  x += vx * dt;  y += vy * dt;
+
+void Profile::setDisplayName(std::string dspn){
+  displayName = dspn;
 }
-Particle::Particle(double posx, double posy, double velx, double vely) {
-  x = posx;   y = posy;
-  vx = velx;  vy = vely;
-}
-Particle::Particle() {
-  x = 0;   y = 0;
-  vx = 0;  vy = 0;
-}
+
+
+
+/*var
+private:
+    std::string username;
+    std::string displayName;
+
+public:
+    // Profile constructor for a user (initializing 
+    // private variables username=usrn, displayname=dspn)
+    Profile(std::string usrn, std::string dspn);
+    // Default Profile constructor (username="", displayname="")
+    Profile();
+    // Return username
+    std::string getUsername();
+    // Return name in the format: "displayname (@username)"
+    std::string getFullName();
+    // Change display name
+    void setDisplayName(std::string dspn);
 
 */
