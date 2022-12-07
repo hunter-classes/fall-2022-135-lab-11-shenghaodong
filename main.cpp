@@ -34,13 +34,13 @@ int main(){
     std::cout << nw.addUser("mario-2", "Mario2") << std::endl;  // false (0)
 
     for(int i = 2; i < 20; i++)
-        std::cout << nw.addUser("mario" + to_string(i), 
-                    "Mario" + to_string(i)) << std::endl;   // true (1)
+        std::cout << nw.addUser("mario" + std::__cxx11::to_string(i), 
+                    "Mario" + std::__cxx11::to_string(i)) << std::endl;   // true (1)
 
     std::cout << nw.addUser("yoshi", "Yoshi") << std::endl;     // false (0)
 
     //Part C
-    std::cout << "Part C\n" << std::endl;
+    std::cout << "\nPart C\n" << std::endl;
     //changed network name to not interfere with Part B
     Network nw2;
     // add three users
@@ -61,8 +61,8 @@ int main(){
     
     // add clone users who follow @mario
     for(int i = 2; i < 6; i++) {
-        std::string usrn = "mario" + to_string(i);
-        std::string dspn = "Mario " + to_string(i);
+        std::string usrn = "mario" + std::__cxx11::to_string(i);
+        std::string dspn = "Mario " + std::__cxx11::to_string(i);
         nw2.addUser(usrn, dspn);
         nw2.follow(usrn, "mario");
     }
